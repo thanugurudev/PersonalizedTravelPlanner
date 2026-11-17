@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripMate | Your Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">✈ TripMate</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#planner">Plan Trip</a>
+            <a href="#destinations">Explore</a>
+            <a href="#mytrip">My Trip</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">YOUR JOURNEY, YOUR WAY</p>
+            <h1>Explore More.<br>Worry Less.</h1>
+            <p>
+                Discover beautiful destinations, plan your journey
+                and travel within your budget.
+            </p>
+            <a href="#planner" class="main-btn">Plan Your Trip →</a>
+        </div>
+    </section>
+
+    <!-- Trip Planner -->
+    <section class="planner section" id="planner">
+        <div class="section-heading">
+            <p>PERSONALISED TRAVEL</p>
+            <h2>Plan Your Perfect Trip</h2>
+            <span>Tell us what you love. We'll help you plan.</span>
+        </div>
+
+        <form id="tripForm" class="planner-form">
+
+            <div class="form-group">
+                <label for="city">Destination</label>
+                <select id="city" required>
+                    <option value="">Select a destination</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Mysuru">Mysuru</option>
+                    <option value="Coorg">Coorg</option>
+                    <option value="Chikkamagaluru">Chikkamagaluru</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="budget">Total Budget (₹)</label>
+                <input type="number" id="budget"
+                    placeholder="Example: 3000" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="days">Number of Days</label>
+                <input type="number" id="days"
+                    placeholder="Example: 2" min="1" max="10" required>
+            </div>
+
+            <div class="form-group interests-group">
+                <label>Your Interests</label>
+
+                <div class="interest-options">
+                    <label><input type="checkbox" name="interest" value="Nature"> 🌳 Nature</label>
+                    <label><input type="checkbox" name="interest" value="History"> 🏛️ History</label>
+                    <label><input type="checkbox" name="interest" value="Adventure"> 🧗 Adventure</label>
+                    <label><input type="checkbox" name="interest" value="Shopping"> 🛍️ Shopping</label>
+                    <label><input type="checkbox" name="interest" value="Spiritual"> 🛕 Spiritual</label>
+                    <label><input type="checkbox" name="interest" value="Entertainment"> 🎡 Entertainment</label>
+                </div>
+            </div>
+
+            <button type="submit" class="main-btn">
+                Generate My Travel Plan →
+            </button>
+
+        </form>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="section recommendations" id="destinations">
+        <div class="section-heading">
+            <p>DISCOVER PLACES</p>
+            <h2>Recommended Destinations</h2>
+            <span>Places selected according to your preferences.</span>
+        </div>
+
+        <div id="results" class="destination-grid">
+            <div class="empty-message">
+                <span>🧭</span>
+                <h3>Your adventure starts here!</h3>
+                <p>Fill in your travel preferences to discover places.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Trip -->
+    <section class="section my-trip" id="mytrip">
+        <div class="section-heading">
+            <p>YOUR TRAVEL SCHEDULE</p>
+            <h2>My Travel Itinerary</h2>
+            <span>Your selected places, organised day by day.</span>
+        </div>
+
+        <div id="itinerary" class="itinerary-container">
+            <div class="empty-message">
+                <span>🗺️</span>
+                <h3>No itinerary yet</h3>
+                <p>Generate a travel plan to see your schedule here.</p>
+            </div>
+        </div>
+
+        <div id="tripActions" class="trip-actions" hidden>
+            <button id="saveTrip" class="main-btn">Save My Trip</button>
+            <button id="printTrip" class="secondary-btn">Print Itinerary</button>
+        </div>
+
+        <p id="saveMessage" class="save-message" aria-live="polite"></p>
+    </section>
+
+    <!-- Favourites -->
+    <section class="section favourites">
+        <div class="section-heading">
+            <p>YOUR COLLECTION</p>
+            <h2>Favourite Places ❤️</h2>
+        </div>
+
+        <div id="favourites" class="destination-grid">
+            <p class="empty-favourite">You haven't saved any favourites yet.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>✈ TripMate</h2>
+        <p>Discover. Plan. Explore.</p>
+        <p>Made for travellers who love exploring.</p>
+        <p>© 2026 TripMate. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
